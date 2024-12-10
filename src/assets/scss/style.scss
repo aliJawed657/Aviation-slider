@@ -1,0 +1,15 @@
+// import scss files (for Vendors)
+@use 'vendors/aos.scss';
+
+// import scss files (for Global)
+
+@use 'global/reset';
+@use 'global/fonts';
+@use 'global/variables';
+// @use 'global/mixins';
+@use 'global/global';
+
+// import scss files (for Components)
+
+@use 'components/header';
+@use 'components/footer';

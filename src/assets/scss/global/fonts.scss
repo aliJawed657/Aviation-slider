@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: 'Alexandria';
+    src: url('../fonts/Alexandria-Black.woff2') format('woff2'),
+        url('../fonts/Alexandria-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Alexandria';
+    src: url('../fonts/Alexandria-Bold.woff2') format('woff2'),
+        url('../fonts/Alexandria-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alexandria';
+    src: url('../fonts/Alexandria-Medium.woff2') format('woff2'),
+        url('../fonts/Alexandria-Medium.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* font arabic */
+
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('../fonts/NotoKufiArabic-Black.woff2') format('woff2'),
+        url('../fonts/NotoKufiArabic-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('../fonts/NotoKufiArabic-ExtraBold.woff2') format('woff2'),
+        url('../fonts/NotoKufiArabic-ExtraBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('../fonts/NotoKufiArabic-Medium.woff2') format('woff2'),
+        url('../fonts/NotoKufiArabic-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

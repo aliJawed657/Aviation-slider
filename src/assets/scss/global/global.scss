@@ -1,0 +1,61 @@
+@use "./variables.scss";
+
+:root {
+    --max-width: 120rem;
+    --padding-large: 6.25rem;
+    --padding-medium: 3.75rem;
+    --padding-small: 1.25rem;
+    --width-milestone-wrapper: auto;
+}
+
+html,
+body {
+    color: variables.$black;
+    font-size: 0.8333333333vw;
+    scroll-behavior: smooth;
+    @media #{variables.$vpTablet991} {
+        font-size: 2.083333333vw;   
+    }
+    @media #{variables.$vpMobile600} {
+        font-size: 4.102564103vw;
+    }
+
+   
+}
+
+
+
+b,
+strong {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.sec-padded {
+    padding: 6.25rem 0;
+    @media #{variables.$vpMobile600} {
+        padding: 3rem 0;
+    }
+
+    &--top {
+        padding: 6.25rem 0 0;
+
+        @media #{variables.$vpMobile600} {
+            padding: 2.5rem 0 0;
+        }
+    }
+
+    &--bottom {
+        padding: 0 0 6.25rem;
+        @media #{variables.$vpMobile600} {
+            padding: 0 0 3rem;
+        }
+    }
+}
