@@ -11,12 +11,12 @@
 html,
 body {
     color: variables.$black;
-    font-size: 0.8333333333vw;
+    font-size: 1.111111111vw;
     scroll-behavior: smooth;
-    @media #{variables.$vpTablet991} {
+    @media screen and (max-width: 991px) {
         font-size: 2.083333333vw;   
     }
-    @media #{variables.$vpMobile600} {
+    @media screen and (max-width: 600px) {
         font-size: 4.102564103vw;
     }
 
@@ -24,6 +24,23 @@ body {
 }
 
 
+.container{
+    max-width: 73.25rem;
+    padding: 0;
+    height: 100%;
+    margin: 0 auto;
+  } 
+.container-padding{
+    padding: 0 8.438rem;
+    @media screen and (max-width: 991px){
+        padding: 0 1.25rem;
+
+    }
+    @media screen and (max-width: 600px){
+        padding: 5rem 1.25rem;
+
+    }
+}
 
 b,
 strong {
@@ -40,21 +57,21 @@ img {
 
 .sec-padded {
     padding: 6.25rem 0;
-    @media #{variables.$vpMobile600} {
+    @media screen and (max-width: 600px) {
         padding: 3rem 0;
     }
 
     &--top {
         padding: 6.25rem 0 0;
 
-        @media #{variables.$vpMobile600} {
+         @media screen and (max-width: 600px) {
             padding: 2.5rem 0 0;
         }
     }
 
     &--bottom {
         padding: 0 0 6.25rem;
-        @media #{variables.$vpMobile600} {
+         @media screen and (max-width: 600px) {
             padding: 0 0 3rem;
         }
     }

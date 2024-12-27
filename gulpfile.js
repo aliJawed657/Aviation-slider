@@ -259,7 +259,7 @@ function runbrowser() {
 		console.log('css changes');
 	});
 	watch([paths.source + '/assets/scripts/main.js']).on('change', () => {
-		// minifyJs();
+		minifyJs();
 		console.log('script changes');
 	});
 	watch([paths.source + '/assets/scripts/vendors/*.js']).on('change', () => {
@@ -290,7 +290,7 @@ function runbrowserrtl() {
 		console.log('css changes');
 	});
 	watch([paths.source + '/assets/scripts/main.js']).on('change', () => {
-		// minifyJs();
+		minifyJs();
 		console.log('script changes');
 	});
 	watch([paths.source + '/assets/scripts/vendors/*.js']).on('change', () => {
@@ -315,7 +315,7 @@ exports.default = series(
 	createDist,
 	sassToCss,
 	vendorJs,
-	// minifyJs,
+	minifyJs,
 	includehtml,
 	runbrowser
 );
@@ -325,7 +325,7 @@ exports.defaultrtl = series(
 	sassToCss,
 	rtlCss,
 	vendorJs,
-	// minifyJs,
+	minifyJs,
 	includehtml,
 	rtlhtml,
 	runbrowserrtl
@@ -335,7 +335,7 @@ exports.build = series(
 	createDist,
 	sassToCss,
 	vendorJs,
-	// minifyJs,
+	minifyJs,
 	includehtml,
 	criticalcss
 );
@@ -345,7 +345,7 @@ exports.buildrtl = series(
 	sassToCss,
 	rtlCss,
 	vendorJs,
-	// minifyJs,
+	minifyJs,
 	includehtml,
 	rtlhtml,
 	criticalcss,

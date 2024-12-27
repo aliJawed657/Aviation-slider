@@ -1,0 +1,30 @@
+@use "./variables.scss";
+
+.btn-btn-secondary {
+    width: max-content;
+
+    .button {
+        min-width: 8.813rem;
+        // min-height: 46px;
+        padding: 0.844rem 2.094rem;
+        border-radius: 3.75rem;
+        border: none;
+        text-align: center;
+        color: variables.$white;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.32px;
+        background-color: variables.$secondaryColor;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover{
+            transition: all 0.2s ease-in;
+            background-color: variables.$textColor;
+            color: variables.$white;
+        }
+    }
+}

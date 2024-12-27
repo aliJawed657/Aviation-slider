@@ -1,16 +1,24 @@
 // Custom Variables //
-$primaryFont: 'Alexandria', Arial, Helvetica, sans-serif;
+$primaryFont: 'Roboto', Arial, Helvetica, sans-serif;
 $arabicFont: 'Noto Kufi Arabic', sans-serif;
 
 $white: #FFFFFF;
 $black: #000000;
+$secondaryColor:#FFAC32;
+$textColor:#1E1F1E;
+$textGray:#737373;
+$darkGreen:#466F35;
+$skyBlue:#7EDBE4;
+$bgGrey:#E6E6E6;
+$bgSecondaryGrey: #F3F3F3;
 
 // Media Queries
 $vpDesktop1680: '(max-width:1680px)';
 $vpDesktop1440: '(max-width:1440px)';
 $vpTablet1229: '(max-width:1229px)';
+$vpTablet1280: '(max-width:1280px)';
 $vpTablet1024: '(max-width:1024px)';
-$vpTablet991: '(max-width:991px)';
+$vpsTablet991: '(max-width:991px)';
 $vpTablet768: '(max-width:768px)';
 $vpTablet767: '(max-width:767px)';
 $vpMobile600: '(max-width:600px)';

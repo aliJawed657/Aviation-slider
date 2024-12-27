@@ -7,7 +7,7 @@
 
 @mixin font($content) {
     @include language(ar) {
-      font-family: "Cairo", sans-serif;
+      font-family: $primaryFont;
 
       @if $content == 'regular' {
         font-weight: 400;

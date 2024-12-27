@@ -1,0 +1,173 @@
+@use "../global/variables.scss";
+
+.get-started-container {
+    width: 100%;
+    background-color: variables.$bgGrey;
+    margin-top: 5rem;
+
+    .top-content {
+        padding-top: 3.81rem;
+        padding-bottom: 7.46rem;
+
+        .main-heading {
+            width: 100%;
+
+            p {
+                margin: 0% auto;
+                max-width: 47.455rem;
+                text-align: center;
+                color: variables.$textColor;
+                font-family: Roboto;
+                font-size: 2.25rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.8;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                span {
+                    color: variables.$secondaryColor;
+                    font-family: Roboto;
+                    font-size: 2.25rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            p {
+                max-width: 60.25rem;
+                color: variables.$textColor;
+                text-align: center;
+                margin: 0% auto;
+                font-family: Roboto;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .cards-container {
+        padding: 0 0 4.97rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        row-gap: 4.813rem;
+        .card {
+            background-color: variables.$white;
+            width: 23.5rem;
+            // height: 13.25rem;
+            padding: 3.75rem 2.69rem 2.18rem 2.69rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.497rem;
+            flex-shrink: 0;
+            border-radius: 0.995rem;
+            box-shadow: 0px 0.497rem 2.985rem 0px rgba(38, 45, 118, 0.08);
+            position: relative;
+
+            // top: -50%;
+            .top-image {
+                width: 5rem;
+                height: 5rem;
+                background-color: variables.$black;
+                border-radius: 50%;
+                position: absolute;
+                top: -3.125rem;
+                transform: translateX(-50%);
+                left: 50%;
+
+                .img {
+                    position: relative;
+                    width: 100%;
+                    height: 1.938rem;
+                    svg {
+                        position: absolute;
+                        top: 1.563rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .content {
+                .main-heading {
+                    p {
+                        color: variables.$textColor;
+                        text-align: center;
+                        font-family: Roboto;
+                        font-size: 1.25rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.3;
+                    }
+                }
+                .description {
+                    margin-top: 1.188rem;
+                    p {
+                        color: variables.$textGray;
+                        text-align: center;
+                        font-family: Roboto;
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .get-started-container{
+        .top-content{
+            .main-heading{
+                margin-bottom: 0.5rem;
+                p{
+                    line-height: 1.3;
+                    span{
+                        line-height: 0;
+                    }
+                }
+            }
+            
+        }
+        .cards-container{
+            padding: 0 0 5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 4rem;
+            justify-content: left;
+            .card{
+                width: 48.5%;
+                padding: 3.75rem 1.686rem 2.125rem 1.686rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px){
+    .get-started-container{
+        margin-top: 0;
+        .top-content{
+            padding-top: 0;
+        }
+        .cards-container{
+            padding: 0;
+
+            .card{
+                width: 100%;
+            }
+        }
+}
+}

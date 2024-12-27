@@ -1,0 +1,242 @@
+@use "../global/variables.scss";
+
+.header {
+    width: 100%;
+    padding: 1rem 8.438rem 0 8.438rem;
+    display: flex;
+    align-items: center;
+    gap: 13.563rem;
+    z-index: 111;
+    position: absolute;
+
+    .navbar-logo {
+        width: 4.6875rem;
+        height: 3.76156rem;
+        flex-shrink: 0;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .navbar-menu-button-container {
+        display: flex;
+        gap: 3.063rem;
+        align-items: center;
+
+        .navbar-menu {
+            display: flex;
+            gap: 2.688rem;
+
+            p {
+                color: variables.$textColor;
+                font-family: Roboto;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.32px;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    width: 0;
+                    height: 2px;
+                    background-color: variables.$secondaryColor;
+                    transition: all 0.3s ease-out;
+                }
+
+                &:hover::after {
+                    animation: expandLine 0.3s forwards;
+                }
+            }
+        }
+    }
+
+    .mobile-hamburger {
+        svg{
+            path{
+                stroke: variables.$black;
+            }
+        }
+        display: none;
+    }
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    background-color: variables.$black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    &.mobile-menu-overlay-close{
+        display: none;
+    }
+    .mobile-menu-content {
+        color: variables.$white;
+        height: 100vh;
+        text-align: center;
+        width: 100%;
+        padding: 0 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .mobile-logo-menu-container {
+
+            .mobile-logo-crossIcon-container {
+                margin-top: 2.31rem;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+
+                .logo {
+                    width: 5.78125rem;
+                    height: 4.625rem;
+                    flex-shrink: 0;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+
+                        path {
+                            fill: #74B959;
+                            stroke: #74B959;
+                        }
+                    }
+                }
+                .close-icon {
+                    font-size: 2rem;
+                    cursor: pointer;
+                    width: 1.37463rem;
+                    height: 1.37463rem;
+                    flex-shrink: 0;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .mobile-menu-nav {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-top: 2.81rem;
+            
+                ul {
+                    li {
+                        position: relative;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1.13rem;
+                        margin-top: 1.13rem;
+                        border-bottom: 1px solid #484a48    ;
+                        .content-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%; 
+                            padding-bottom: 1.2rem; 
+                        }            
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.5;
+            
+                        &:hover .content-wrapper {
+                            color: variables.$secondaryColor;
+                        }
+            
+                        span {
+                            padding-top: 7px;
+            
+                            svg path {
+                                transition: fill 0.3s;
+                            }
+                        }
+            
+                        &:hover span svg path {
+                            fill: variables.$secondaryColor;
+                        }
+                    }
+                }
+            }            
+        }
+        .mobile-section-bottom {
+            // padding: 1.688rem 0;
+            margin: 0 auto;
+            .content {
+                .store-download-btn {
+                    width: fit-content;
+                    margin-top: 1.25rem;
+                    display: flex;
+                    gap: 0.938rem;
+                    padding-bottom: 2.17rem;
+
+                    .image {
+                        width: 8.813rem;
+                        height: 2.938rem;
+
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .bottom-side {
+                    display: flex;
+                    gap: 0.91rem;
+                    padding-bottom: 2.09rem;
+
+                    p {
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 0.875rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+
+
+    .header {
+        padding: 1rem 1.25rem 0 1.25rem;
+        justify-content: space-between;
+
+        .navbar-menu-button-container {
+            &.hide {
+                display: none !important;
+            }
+        }
+
+        .mobile-hamburger {
+            display: block;
+            width: 2rem;
+            cursor: pointer;
+        }
+    }
+}

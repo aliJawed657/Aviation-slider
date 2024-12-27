@@ -1,0 +1,118 @@
+@use "../global/variables.scss";
+
+.team-section {
+    width: 100%;
+    background-color: variables.$bgSecondaryGrey;
+
+    .team-top-content {
+        padding-top: 3.81rem;
+        padding-bottom: 4rem    ;
+
+        .content {
+            .main-heading {
+                margin-bottom: 0.32rem;
+                width: 100%;
+
+                p {
+                    margin: 0 auto;
+                    max-width: 47.45525rem;
+                    color: variables.$textColor;
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 2.25rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.8;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    span {
+                        color: variables.$secondaryColor;
+                        font-family: Roboto;
+                        font-size: 2.25rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 1.8;
+                    }
+                }
+            }
+
+            .description {
+                width: 100%;
+
+                p {
+                    margin: 0 auto;
+                    max-width: 60.25rem;
+                    color: variables.$textColor;
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    .team-bottom-image {
+        display: flex;
+        gap: 2.01rem;
+        padding-bottom: 5.02rem;
+        justify-content: center;
+        flex-wrap: wrap;
+     
+        .team-member {
+            position: relative;
+            z-index: 1;
+            width: 10.875rem;
+            height: 10.875rem;
+     
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 10.78031rem;
+                height: 10.78031rem;
+                transform: rotate(8.954deg);
+                flex-shrink: 0;
+                border-radius: 1.872rem;
+                background: rgba(116, 185, 89, 0.50);
+                left: 0;
+                top: 0;
+                z-index: -1;
+
+            }
+
+
+ 
+        }
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .team-section{  
+        .team-top-content{
+        }
+        .team-bottom-image{
+            flex-wrap: wrap;
+            row-gap: 2.5rem;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .team-section{  
+        .team-top-content{
+            padding-top: 0;
+        }
+        .team-bottom-image{
+            padding-bottom: 0;
+        }
+    }
+}
