@@ -99,6 +99,7 @@ function vendorJs() {
 	return src([
 		paths.source + '/assets/scripts/jquery.js',
 		paths.source + '/assets/scripts/vendors/aos.js',
+		paths.source + '/assets/scripts/vendors/slick.min.js',
 
 	])
 		.pipe(sourcemaps.init())

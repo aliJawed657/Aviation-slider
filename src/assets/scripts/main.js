@@ -8,13 +8,53 @@ isMobile = false,
     browserDetect();
   });
 
+
+$(window).on("scroll", function () {
+  let scrollPosition = $(window).scrollTop();
+  let header = $(".header");
+  header.css("position", "fixed")
+
+  if (scrollPosition > 50) {
+    header.css("background-color", "white");
+  } else {
+    header.css("background-color", "");
+  }
+});
+
+
+
+
+$('.team-bottom-image').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
+});
+
+
+
+
 $(window).on("resize orientationchange", function () {
-  // Do on resize
   (winWidth = $(window).width()), (winHeight = $(window).height());
 });
 
+
+
 $(window).on("scroll", function () {
-  //Do on Scroll
+
 });
 
 $(document).keyup(function (e) {
@@ -86,6 +126,9 @@ function ChangeToSvg() {
     );
   });
 }
+
+
+
 
 
 function header() {

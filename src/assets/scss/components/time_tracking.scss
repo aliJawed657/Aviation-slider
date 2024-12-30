@@ -9,7 +9,7 @@
     .time-tracking-left-content {
         .content {
             max-width: 34.16406rem;
-            padding: 12.37rem 0;
+            padding: 11.13rem 0;
 
             .main-heading {
                 margin-bottom: 2.13rem;
@@ -17,6 +17,7 @@
                 max-width: 20.9375rem;
                 width: 100%;
                 margin-bottom: 2.13rem;
+
                 p {
                     position: relative;
                     z-index: 1;
@@ -79,7 +80,7 @@
             }
 
             .character-bg-image {
-                padding-top: 3.4rem;
+                padding-top: 2.4rem;
                 width: 30rem;
                 position: absolute;
                 top: 0;
@@ -98,17 +99,21 @@
         flex-wrap: wrap;
         gap: 0;
         justify-content: center;
-        &.container-padding{
+
+        &.container-padding {
             padding-bottom: 0;
         }
+
         .time-tracking-left-content {
             .content {
                 padding: 3.75rem 0;
                 text-align: center;
                 margin: 0 auto;
-                .main-heading{
+
+                .main-heading {
                     margin: 0 auto;
                     margin-bottom: 2.13rem;
+
                     p {
                         text-align: center;
                     }

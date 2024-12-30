@@ -62,8 +62,8 @@
         padding: 1.688rem 0;
 
         .content {
-            display: flex;
-            gap: 37.09rem;
+            display: -webkit-inline-box;
+            gap: 37.688rem;
 
             .left-side {
                 color: #B2B3CF;
@@ -76,7 +76,7 @@
 
             .right-side {
                 display: flex;
-                gap: 0.87rem;
+
 
                 p {
                     color: #B2B3CF;
@@ -86,6 +86,7 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 150%;
+                    padding-right: 0.875rem;
                 }
             }
         }
@@ -119,7 +120,7 @@
                 }
 
                 .right-side {
-                    justify-content: center;    
+                    justify-content: center;
                     flex-wrap: wrap;
                 }
             }

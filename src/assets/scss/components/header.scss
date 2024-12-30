@@ -2,10 +2,10 @@
 
 .header {
     width: 100%;
-    padding: 1rem 8.438rem 0 8.438rem;
+    padding: 2.5rem 8.438rem;
     display: flex;
     align-items: center;
-    gap: 13.563rem;
+    gap: 14rem;
     z-index: 111;
     position: absolute;
 
@@ -22,12 +22,11 @@
 
     .navbar-menu-button-container {
         display: flex;
-        gap: 3.063rem;
         align-items: center;
 
         .navbar-menu {
             display: flex;
-            gap: 2.688rem;
+            flex-wrap: wrap;
 
             p {
                 color: variables.$textColor;
@@ -36,9 +35,11 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                letter-spacing: 0.32px;
+                // letter-spacing: 0.32px;
                 cursor: pointer;
                 position: relative;
+                margin-right: 2.75rem;
+
 
                 &::after {
                     content: '';
@@ -59,11 +60,12 @@
     }
 
     .mobile-hamburger {
-        svg{
-            path{
+        svg {
+            path {
                 stroke: variables.$black;
             }
         }
+
         display: none;
     }
 }
@@ -79,9 +81,11 @@
     justify-content: center;
     align-items: center;
     transition: right 0.3s ease-in-out;
-    &.mobile-menu-overlay-close{
+
+    &.mobile-menu-overlay-close {
         display: none;
     }
+
     .mobile-menu-content {
         color: variables.$white;
         height: 100vh;
@@ -116,6 +120,7 @@
                         }
                     }
                 }
+
                 .close-icon {
                     font-size: 2rem;
                     cursor: pointer;
@@ -135,7 +140,7 @@
                 flex-direction: column;
                 text-align: left;
                 margin-top: 2.81rem;
-            
+
                 ul {
                     li {
                         position: relative;
@@ -145,43 +150,47 @@
                         align-items: center;
                         margin-bottom: 1.13rem;
                         margin-top: 1.13rem;
-                        border-bottom: 1px solid #484a48    ;
+                        border-bottom: 1px solid #484a48;
+
                         .content-wrapper {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            width: 100%; 
-                            padding-bottom: 1.2rem; 
-                        }            
+                            width: 100%;
+                            padding-bottom: 1.2rem;
+                        }
+
                         color: #FFF;
                         font-family: Roboto;
                         font-size: 1rem;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 1.5;
-            
+
                         &:hover .content-wrapper {
                             color: variables.$secondaryColor;
                         }
-            
+
                         span {
                             padding-top: 7px;
-            
+
                             svg path {
                                 transition: fill 0.3s;
                             }
                         }
-            
+
                         &:hover span svg path {
                             fill: variables.$secondaryColor;
                         }
                     }
                 }
-            }            
+            }
         }
+
         .mobile-section-bottom {
             // padding: 1.688rem 0;
             margin: 0 auto;
+
             .content {
                 .store-download-btn {
                     width: fit-content;
@@ -238,5 +247,9 @@
             width: 2rem;
             cursor: pointer;
         }
+    }
+
+    .mobile-menu-overlay {
+        overflow-y: scroll;
     }
 }

@@ -58,6 +58,8 @@
         }
     }
 
+
+
     .team-bottom-image {
         display: flex;
         gap: 2.01rem;
@@ -68,19 +70,22 @@
         .team-member {
             position: relative;
             z-index: 1;
-            width: 10.875rem;
-            height: 10.875rem;
+            margin: 20px;
+
+
 
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: contain;
+
             }
 
             &::after {
                 position: absolute;
-                content: '';
-                width: 10.78031rem;
-                height: 10.78031rem;
+                content: '';  
+                width: 100%;
+                height: 100%;
                 transform: rotate(8.954deg);
                 flex-shrink: 0;
                 border-radius: 1.872rem;
@@ -88,21 +93,51 @@
                 left: 0;
                 top: 0;
                 z-index: -1;
+                object-fit: contain;
+
 
             }
 
 
+
         }
-        // &:nth-child(even){
-        //     .team-member{
-        //       &::after{
-        //         transform: rotate(-8.954deg);
-        //       }
-        //     }
-        // }
-        
-     
+
+        .team-member {
+            &:nth-child(even) {
+                &::after {
+                    transform: rotate(-8.954deg);
+                }
+            }
+        }
+
+
     }
+}
+
+.slick-dots {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.team-bottom-image .slick-dots li button {
+    background-color: #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    font-size: 0px;
+    border: none;
+}
+
+.team-bottom-image .slick-dots li.slick-active button {
+    background-color: #74b959;
+    opacity: 1;
+}
+
+.team-bottom-image .slick-dots li button:hover {
+    background-color: #74b959;
+    ;
 }
 
 
@@ -110,13 +145,17 @@
 
 @media screen and (max-width:992px) {
     .team-section {
-        // .team-top-content {}
-
         .team-bottom-image {
             flex-wrap: wrap;
             row-gap: 2.5rem;
         }
     }
+}
+
+
+.team-member img {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width:600px) {
