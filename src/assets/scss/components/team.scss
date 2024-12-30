@@ -71,6 +71,9 @@
             position: relative;
             z-index: 1;
             margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
 
 
@@ -83,7 +86,7 @@
 
             &::after {
                 position: absolute;
-                content: '';  
+                content: '';
                 width: 100%;
                 height: 100%;
                 transform: rotate(8.954deg);
@@ -94,6 +97,9 @@
                 top: 0;
                 z-index: -1;
                 object-fit: contain;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
 
             }
@@ -137,7 +143,7 @@
 
 .team-bottom-image .slick-dots li button:hover {
     background-color: #74b959;
-    ;
+
 }
 
 
@@ -148,7 +154,26 @@
         .team-bottom-image {
             flex-wrap: wrap;
             row-gap: 2.5rem;
+
+            img {
+                max-width: 50% !important;
+            }
+
+            .team-member {
+
+                img {
+                    max-width: 90% !important;
+
+                    &:after {
+                        max-width: 90% !important;
+
+
+                    }
+                }
+            }
         }
+
+
     }
 }
 
