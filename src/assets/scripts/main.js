@@ -138,15 +138,23 @@ function header() {
 
   hamburger.addEventListener("click", () => {
     mobileMenuOverlay.style.right = "0";
+    $("body").css("overflowY", "hidden")
+
+
   });
 
   closeIcon.addEventListener("click", () => {
     mobileMenuOverlay.style.right = "-100%";
+    $("body").css("overflowY", "")
+
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 991) {
       mobileMenuOverlay.style.right = "-100%";
+      $("body").css("overflowY", "")
+
+
     }
   });
 
