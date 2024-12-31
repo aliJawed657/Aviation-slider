@@ -5,9 +5,10 @@
     padding: 2.5rem 8.438rem;
     display: flex;
     align-items: center;
-    gap: 14rem;
+    // gap: 14rem;
     z-index: 111;
     position: absolute;
+    justify-content: space-between;
 
     .navbar-logo {
         width: 4.6875rem;
@@ -91,7 +92,7 @@
         height: 100vh;
         text-align: center;
         width: 100%;
-        padding: 0 2.5rem;
+        padding: 0 2.063rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -148,8 +149,6 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        margin-bottom: 1.13rem;
-                        margin-top: 1.13rem;
                         border-bottom: 1px solid #484a48;
 
                         .content-wrapper {
@@ -157,7 +156,8 @@
                             justify-content: space-between;
                             align-items: center;
                             width: 100%;
-                            padding-bottom: 1.2rem;
+                            // padding-bottom: 1.2rem;
+                            margin: 1.125rem 0;
                         }
 
                         color: #FFF;
@@ -172,7 +172,6 @@
                         }
 
                         span {
-                            padding-top: 7px;
 
                             svg path {
                                 transition: fill 0.3s;
@@ -233,7 +232,7 @@
 
 
     .header {
-        padding: 1rem 1.25rem 0 1.25rem;
+        padding: 1rem 1.25rem;
         justify-content: space-between;
 
         .navbar-menu-button-container {
