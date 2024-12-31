@@ -36,8 +36,8 @@ $('.team-bottom-image').slick({
       breakpoint: 991,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
+        slidesToScroll: 1,
+        infinite: false,
         dots: true
       }
     }
