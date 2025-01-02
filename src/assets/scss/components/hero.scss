@@ -25,25 +25,24 @@
         align-items: center;
 
         .wrap-images {
-            // max-width: 45.316rem;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            right: -45px;
+            right: -2.813rem;
 
 
             .sleeper {
                 position: absolute;
                 // left: 73px;
-                top: -97px;
+                top: -6.063rem;
             }
 
             .for-image {
                 position: relative;
                 bottom: 0;
                 z-index: 1;
-                max-width: 725px;
+                max-width: 45.316rem;
 
             }
         }
@@ -180,6 +179,7 @@
     .wrap-content {
         display: block !important;
         padding: 5rem 1.25rem 0 !important;
+
         .wrap-images {
             max-width: 100% !important;
             right: 0px !important;
@@ -217,14 +217,16 @@
             position: relative;
         }
     }
-    .sleeper{
+
+    .sleeper {
         top: 0 !important;
     }
+
     .wrap-content {
         .content {
             padding: 2rem 0 0rem !important;
         }
 
-      
+
     }
 }
