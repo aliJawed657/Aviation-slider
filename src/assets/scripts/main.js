@@ -24,35 +24,40 @@ $(window).on("scroll", function () {
 
 
 
-$('.team-bottom-image').slick({
+$(document).ready(function () {
+  var totalSlides = $('.team-bottom-image .team-member').length;
 
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: true
+  $('.team-bottom-image').slick({
+    dots: totalSlides > 4 ? true : false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: totalSlides > 4 ? true : false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: totalSlides > 4 ? true : false
+        }
       }
-    }
-  ]
+    ]
+  });
 });
-
-
 
 
 $(window).on("resize orientationchange", function () {
   (winWidth = $(window).width()), (winHeight = $(window).height());
 });
-
-
 
 $(window).on("scroll", function () {
 
