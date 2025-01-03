@@ -55,6 +55,7 @@ $(document).ready(function () {
 });
 
 
+
 $(window).on("resize orientationchange", function () {
   (winWidth = $(window).width()), (winHeight = $(window).height());
 });
@@ -138,30 +139,71 @@ function ChangeToSvg() {
 
 
 function header() {
+  // const hamburger = document.getElementById("hamburger");
+  // const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+  const closeIcon = document.getElementById("closeIcon");
+  const header = document.getElementById("header");
   const hamburger = document.getElementById("hamburger");
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-  const closeIcon = document.getElementById("closeIcon");
+
+  const one = document.getElementById("one");
+  const two = document.getElementById("two");
+  const three = document.getElementById("three");
 
   hamburger.addEventListener("click", () => {
     mobileMenuOverlay.style.right = "0";
-    $("body").css("overflowY", "hidden")
+
+    $("body").css("overflowY", "hidden");
+
+    $(header).css("z-index", "10000");
+
+    $('#two').css("transform", "rotate(45deg) translate(1px, -8px)").css("transform-origin", "center");
+    $('#three').css("transform", "rotate(-45deg) translate(-3px  ,12px)").css("transform-origin", "center");
+    $('#one').css("opacity", 0);
+
+    if (hamburger.classList.contains('opened')) {
+      $(two).css("transform", "none");
+      $(one).css("opacity", 1);
+      $(three).css("transform", "none");
+      $(two).css("stroke", "none")
+
+      mobileMenuOverlay.style.right = "-100%";
+      $("body").css("overflowY", "auto");
+      $(header).css("z-index", "");
+      $(".header .mobile-hamburger svg path").css("stroke", "")
+      $(".header .navbar-logo svg path").css("fill", "")
 
 
-  });
+      hamburger.classList.remove('opened');
+    } else {
+      hamburger.classList.add('opened');
+      $(".header .mobile-hamburger svg path").css("stroke", "green")
+      $(".header .navbar-logo svg path").css("fill", "green")
 
-  closeIcon.addEventListener("click", () => {
-    mobileMenuOverlay.style.right = "-100%";
-    $("body").css("overflowY", "")
-
+    }
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 991) {
+
       mobileMenuOverlay.style.right = "-100%";
       $("body").css("overflowY", "")
+      $(".header .mobile-hamburger svg path").css("stroke", "")
+      $(".header .navbar-logo svg path").css("fill", "")
+      $('#two').css("transform", "");
+      $('#three').css("transform", "");
+      $('#one').css("opacity", "");
+    } else if (hamburger.classList.add('opened')) {
+      $(".header .mobile-hamburger svg path").css("stroke", "green")
+      $(".header .navbar-logo svg path").css("fill", "green")
 
 
     }
   });
 
 }
+
+
+
+
+

@@ -11,8 +11,8 @@
     justify-content: space-between;
 
     .navbar-logo {
-        width: 75px ;
-        height: 60.19px;
+        width: 92.5px;
+        height: 74px;
         flex-shrink: 0;
 
         svg {
@@ -92,7 +92,7 @@
         height: 100vh;
         text-align: center;
         width: 100%;
-        padding: 0 2.063rem;
+        padding: 0 1.25rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -100,8 +100,9 @@
         .mobile-logo-menu-container {
 
             .mobile-logo-crossIcon-container {
-                margin-top: 2.31rem;
+                // margin-top: 2.31rem;
                 display: flex;
+                // justify-content: space-between;
                 justify-content: space-between;
                 width: 100%;
                 align-items: center;
@@ -140,7 +141,7 @@
                 display: flex;
                 flex-direction: column;
                 text-align: left;
-                margin-top: 2.81rem;
+                margin-top: 6.81rem;
 
                 ul {
                     li {
@@ -167,9 +168,10 @@
                         font-weight: 400;
                         line-height: 1.5;
 
-                        &:hover .content-wrapper {
-                            color: variables.$secondaryColor;
-                        }
+                        // &:hover .content-wrapper {
+                        //     color: variables.$secondaryColor;
+                        // }
+
 
                         span {
 
@@ -178,9 +180,13 @@
                             }
                         }
 
-                        &:hover span svg path {
+                        &.active span svg path {
                             fill: variables.$secondaryColor;
                         }
+                    }
+
+                    .active {
+                        color: variables.$secondaryColor !important;
                     }
                 }
             }
@@ -250,9 +256,31 @@
             width: 2rem;
             cursor: pointer;
         }
+
+        .navbar-logo {
+            svg {
+                path {
+                    stroke: variables.$darkGreen;
+                }
+            }
+
+        }
+
     }
 
     .mobile-menu-overlay {
         overflow-y: scroll;
+    }
+
+    .mobile-hamburger {
+        svg {
+            path {
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+        }
     }
 }
