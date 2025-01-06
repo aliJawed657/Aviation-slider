@@ -106,7 +106,7 @@
                     height: 100%;
                     transform: rotate(8.954deg);
                     flex-shrink: 0;
-                    border-radius: .625rem;
+                    border-radius: 1.872rem;
                     background: rgba(116, 185, 89, 0.50);
                     left: 0;
                     top: 0;
@@ -123,15 +123,17 @@
 
 
             &:nth-child(even) {
-                &::after {
-                    transform: rotate(-8.954deg);
+                .warpper {
+                    &::after {
+                        transform: rotate(-8.954deg);
+                    }
                 }
             }
 
         }
 
 
-     
+
 
 
         .slick-dots {
@@ -216,6 +218,13 @@
                 &::after {
                     border-radius: .625rem !important;
 
+                }
+
+                .warpper {
+                    &::after {
+                        border-radius: .625rem;
+
+                    }
                 }
             }
         }
