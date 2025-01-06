@@ -26,28 +26,29 @@
         height: 100%;
 
         .wrap-images {
-            flex: 0 0 59.24%;
+            flex: 0 0 45.313rem;
             height: 100%;
-            max-width: 59.24%;
+            max-width: 45.313rem;
             position: relative;
 
 
             .sleeper {
                 bottom: 0;
                 height: 100%;
-                position: absolute;
                 width: 100%;
                 z-index: -1;
-                top: -33%  !important;
-                right: -6% !important;
+                top: -33% !important;
+                right: -10% !important;
+                position: absolute;
             }
 
+            
             .for-image {
                 bottom: 0;
                 height: 100%;
-                // position: absolute;
-                right: 0;
                 width: 100%;
+
+                
             }
         }
     }
@@ -56,28 +57,15 @@
         // z-index: 2;
         // position: relative;
         // padding: 13rem 0 8rem;
-        flex: 0 0 40%;
+        flex: 0 0 26.563rem;
         flex-direction: column;
         height: 100%;
         justify-content: center;
-        max-width: 40%;
+        max-width: 26.563rem;
         padding-bottom: 8.438rem;
         padding-top: 13.5rem;
 
-        .for-image {
-            bottom: 0;
-            z-index: 1;
-            // right: -41px;
-            // position: relative;
-
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: bottom;
-            }
-        }
+    
 
         .main-heading {
             max-width: 32rem;
@@ -155,8 +143,8 @@
             gap: 0.938rem;
 
             .image {
-                width: 8.813rem;
-                height: 2.938rem;
+                width: 141.008px !important;
+                height: 47px !important;
 
                 svg {
                     width: 100%;
@@ -250,21 +238,25 @@
 
 
 @media screen and (max-width:375px) {
-    .heading-1 {
-        font-size: 2.25rem !important;
-        line-height: 2.437rem !important;
-    }
+    .main-heading {
+        .heading-1 {
+            font-size: 36px !important;
+            line-height: 38.99px !important;
+        }
 
-    .heading-2 {
-        font-size: 2rem !important;
-        line-height: 2.437rem !important
+        .heading-2 {
+            font-size: 32px !important;
+            line-height: 38.99px !important
+        }
     }
 
     .description {
         p {
+            margin-bottom: 1.063rem !important;
+
             span {
                 font-size: 14px !important;
-                line-height: 18px !important;
+                line-height: 18.2px !important;
             }
         }
     }
