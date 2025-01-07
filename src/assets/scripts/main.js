@@ -41,6 +41,16 @@ $(document).ready(function () {
       {
         breakpoint: 991,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: false,
@@ -169,18 +179,18 @@ function header() {
       $(three).css("transform", "none");
       $(two).css("stroke", "none")
 
-      
+
       mobileMenuOverlay.style.right = "-100%";
       $("body").css("overflowY", "auto");
       $(header).css("z-index", "");
       $(".header .mobile-hamburger svg path").css("stroke", "")
       $(".header .navbar-logo svg path").css("fill", "")
-      $(".header").css("background-color" , "")
-      
-      
+      $(".header").css("background-color", "")
+
+
       hamburger.classList.remove('opened');
     } else {
-      $(".header").css("background-color" , "black")
+      $(".header").css("background-color", "black")
       hamburger.classList.add('opened');
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
@@ -198,12 +208,11 @@ function header() {
       $(".header .navbar-logo svg path").css("fill", "")
       $('#two').css("transform", "");
       $('#three').css("transform", "");
-      $(".header").css("background-color" , "")
+      $(".header").css("background-color", "")
       $('#one').css("opacity", "");
     } else if (hamburger.classList.add('opened')) {
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
-
     }
   });
 

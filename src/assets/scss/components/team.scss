@@ -257,35 +257,36 @@
 
 
             }
+
             .team-member {
                 border-radius: .625rem !important;
-        
+
                 img {
                     max-width: 100% !important;
-        
-        
+
+
                     &::after {
                         max-width: 100% !important;
                         border-radius: .625rem !important;
-        
-        
+
+
                     }
                 }
-        
+
                 &::after {
                     border-radius: .625rem !important;
-        
+
                 }
-        
+
                 .warpper {
                     &::after {
                         border-radius: .625rem;
-        
+
                     }
                 }
             }
         }
     }
 
-    
+
 }
