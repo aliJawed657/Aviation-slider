@@ -14,12 +14,13 @@ $(window).on("scroll", function () {
   let header = $(".header");
   header.css("position", "fixed")
 
-  if (scrollPosition > 50) {
+  if (scrollPosition > 0) {
     header.css("background-color", "white");
-    header.css("box-shadow" ,"rgba(0, 0, 0, 0.24) 0px 3px 8px");
+    header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
+
   } else {
     header.css("background-color", "");
-    header.css("box-shadow" ,"");
+    header.css("box-shadow", "");
 
   }
 });
@@ -166,21 +167,29 @@ function header() {
   const three = document.getElementById("three");
 
   hamburger.addEventListener("click", () => {
-    mobileMenuOverlay.style.right = "0";
+    mobileMenuOverlay.style.right = "0"
+    // $(".header").css("background-color", "black");
+
+
+
+
+
 
     $("body").css("overflowY", "hidden");
-
     $(header).css("z-index", "10000");
-
     $('#two').css("transform", "rotate(45deg) translate(1px, -8px)").css("transform-origin", "center");
     $('#three').css("transform", "rotate(-45deg) translate(-3px  ,12px)").css("transform-origin", "center");
     $('#one').css("opacity", 0);
+
 
     if (hamburger.classList.contains('opened')) {
       $(two).css("transform", "none");
       $(one).css("opacity", 1);
       $(three).css("transform", "none");
       $(two).css("stroke", "none")
+      $(".header").css("background-color", "")
+
+
 
 
       mobileMenuOverlay.style.right = "-100%";
@@ -188,17 +197,19 @@ function header() {
       $(header).css("z-index", "");
       $(".header .mobile-hamburger svg path").css("stroke", "")
       $(".header .navbar-logo svg path").css("fill", "")
-      $(".header").css("background-color", "")
-
-
+      // $(".header").css("background-color", "")
       hamburger.classList.remove('opened');
+      if (scrollY > 0) {
+        $(".header").css("background-color", "white")
+      } else {
+        $(".header").css("background-color", "")
+
+      }
     } else {
-      $(".header").css("background-color", "black")
+      // $(".header").css("background-color", "black")
       hamburger.classList.add('opened');
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
-
-
     }
   });
 
