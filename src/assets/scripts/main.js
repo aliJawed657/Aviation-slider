@@ -16,8 +16,11 @@ $(window).on("scroll", function () {
 
   if (scrollPosition > 50) {
     header.css("background-color", "white");
+    header.css("box-shadow" ,"rgba(0, 0, 0, 0.24) 0px 3px 8px");
   } else {
     header.css("background-color", "");
+    header.css("box-shadow" ,"");
+
   }
 });
 

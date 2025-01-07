@@ -58,7 +58,7 @@
         padding: 0 0 4.97rem 0;
         display: flex;
         justify-content: center;
-        gap: 1.25rem;
+        gap: .5rem;
         flex-wrap: wrap;
         row-gap: 4.813rem;
         .card {
@@ -126,6 +126,12 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:1440px){
+    .cards-container{
+        gap: 1.25rem !important;
     }
 }
 
