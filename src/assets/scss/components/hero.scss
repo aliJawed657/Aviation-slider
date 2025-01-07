@@ -32,20 +32,15 @@
             position: relative;
 
 
+
             .sleeper {
                 bottom: 0;
                 height: 100%;
                 z-index: -1;
                 max-width: 100%;
-                // position: absolute;
-                right: -10%;
-            
-
-                // img {
-                //     // right: -7% !important;
-                //     position: relative !important;
-                //     z-index: -1 !important;
-                // }
+                position: absolute;
+                top: -34% !important;
+                right: 7%;
             }
 
 
@@ -53,22 +48,16 @@
                 bottom: 0;
                 height: 100%;
                 width: 100%;
-                position: absolute;
                 max-width: 100%;
+                bottom: -34px !important;
 
 
-                img {
-                    object-position: bottom;
-                    height: 100%;
-                }
+
             }
         }
     }
 
     .content {
-        // z-index: 2;
-        // position: relative;
-        // padding: 13rem 0 8rem;
         flex: 0 0 40%;
         flex-direction: column;
         height: 100%;
@@ -203,9 +192,9 @@
 
                 // right: 0px !important;
                 .sleeper {
-                    right: -2% !important;
+                    // right: -2% !important;
 
-
+                    transform: translate(26px, 23px);
                 }
             }
 
@@ -258,26 +247,54 @@
 
 
 @media screen and (max-width:375px) {
-    .main-heading {
-        .heading-1 {
-            font-size: 36px !important;
-            line-height: 38.99px !important;
+    .content {
+        padding-top: 2.363rem;
+
+        .main-heading {
+            .heading-1 {
+                font-size: 36px !important;
+                line-height: 38.99px !important;
+            }
+
+            .heading-2 {
+                font-size: 32px !important;
+                line-height: 38.99px !important
+            }
         }
 
-        .heading-2 {
-            font-size: 32px !important;
-            line-height: 38.99px !important
+        .description {
+            margin-top: 1.5rem !important;
+
+            p {
+                margin-bottom: 1.063rem !important;
+
+                span {
+                    font-size: 14px !important;
+                    line-height: 18.2px !important;
+                }
+            }
+        }
+
+        .btn {
+            margin-top: 0 !important;
+        }
+
+        .store-download-btn {
+            margin-top: 1.375rem !important;
         }
     }
 
-    .description {
-        p {
-            margin-bottom: 1.063rem !important;
+    .wrap-images {
+        .sleeper {
+            right: 19% !important;
+            // top: -23%;
+            max-width: 80% !important;
+        }
 
-            span {
-                font-size: 14px !important;
-                line-height: 18.2px !important;
-            }
+        .for-image {
+            position: relative;
+            bottom: -30px;
+
         }
     }
 }

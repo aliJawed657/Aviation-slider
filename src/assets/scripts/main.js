@@ -33,6 +33,9 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    draggable: true,
+
+
     autoplay: totalSlides > 4 ? true : false,
     responsive: [
       {
@@ -41,7 +44,8 @@ $(document).ready(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: false,
-          dots: true
+          dots: true,
+
         }
       },
       {
@@ -139,9 +143,7 @@ function ChangeToSvg() {
 
 
 function header() {
-  // const hamburger = document.getElementById("hamburger");
-  // const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-  const closeIcon = document.getElementById("closeIcon");
+  // const closeIcon = document.getElementById("closeIcon");
   const header = document.getElementById("header");
   const hamburger = document.getElementById("hamburger");
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
@@ -167,18 +169,22 @@ function header() {
       $(three).css("transform", "none");
       $(two).css("stroke", "none")
 
+      
       mobileMenuOverlay.style.right = "-100%";
       $("body").css("overflowY", "auto");
       $(header).css("z-index", "");
       $(".header .mobile-hamburger svg path").css("stroke", "")
       $(".header .navbar-logo svg path").css("fill", "")
-
-
+      $(".header").css("background-color" , "")
+      
+      
       hamburger.classList.remove('opened');
     } else {
+      $(".header").css("background-color" , "black")
       hamburger.classList.add('opened');
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
+
 
     }
   });
@@ -192,11 +198,11 @@ function header() {
       $(".header .navbar-logo svg path").css("fill", "")
       $('#two').css("transform", "");
       $('#three').css("transform", "");
+      $(".header").css("background-color" , "")
       $('#one').css("opacity", "");
     } else if (hamburger.classList.add('opened')) {
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
-
 
     }
   });
