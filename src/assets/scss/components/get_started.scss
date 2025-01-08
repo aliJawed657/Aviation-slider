@@ -27,6 +27,7 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 span {
                     color: variables.$secondaryColor;
                     font-family: Roboto;
@@ -40,6 +41,7 @@
 
         .description {
             width: 100%;
+
             p {
                 max-width: 60.25rem;
                 color: variables.$textColor;
@@ -61,6 +63,7 @@
         gap: .5rem;
         flex-wrap: wrap;
         row-gap: 4.813rem;
+
         .card {
             background-color: variables.$white;
             width: 23.5rem;
@@ -89,6 +92,7 @@
                     position: relative;
                     width: 100%;
                     height: 1.938rem;
+
                     svg {
                         position: absolute;
                         top: 1.563rem;
@@ -112,8 +116,10 @@
                         line-height: 1.3;
                     }
                 }
+
                 .description {
                     margin-top: 1.188rem;
+
                     p {
                         color: variables.$textGray;
                         text-align: center;
@@ -129,53 +135,72 @@
     }
 }
 
-@media screen and (max-width:1440px){
-    .cards-container{
+@media screen and (max-width:1440px) {
+    .cards-container {
         gap: 1.25rem !important;
     }
 }
 
 @media screen and (max-width:992px) {
-    .get-started-container{
-        .top-content{
-            .main-heading{
+    .get-started-container {
+        .top-content {
+            .main-heading {
                 margin-bottom: 0.5rem;
-                p{
+
+                p {
                     line-height: 1.3;
-                    span{
+
+                    span {
                         line-height: 0;
                     }
                 }
             }
-            
+
         }
-        .cards-container{
+
+        .cards-container {
             padding: 0 0 5rem 0;
             display: flex;
             flex-wrap: wrap;
             row-gap: 4rem;
             justify-content: left;
-            .card{
+
+            .card {
                 width: 48.5%;
                 padding: 3.75rem 1.686rem 2.125rem 1.686rem;
             }
         }
     }
 }
-@media screen and (max-width:600px){
-    .get-started-container{
+
+@media screen and (max-width:600px) {
+    .get-started-container {
         margin-top: 0;
-        .top-content{
+
+        .top-content {
             padding-top: 0;
         }
-        .cards-container{
+
+        .cards-container {
             padding: 0;
             gap: 3.75rem !important;
 
 
-            .card{
+            .card {
                 width: 100%;
             }
         }
+    }
 }
+@media screen and (max-width:600px) {
+    
+
+        .cards-container {
+            .card {
+               .content{
+                padding: 0 !important;
+               }
+            }
+        }
+    
 }
