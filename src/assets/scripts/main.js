@@ -11,21 +11,21 @@ isMobile = false,
 
 $(window).on("scroll", function () {
   let scrollPosition = $(window).scrollTop();
-  // let header = $(".header");
-  let header = document.getElementById("header")
-  // header.css("position", "fixed")
-  header.classList.add("scrolled")
+  let header = $(".header");
+  // let header = document.getElementById("header")
+  header.css("position", "fixed")
+  // header.classList.add("scrolled")
 
   if (scrollPosition > 0) {
-    // header.css("background-color", "white");
-    header.classList.add("scrolled")
+    header.css("background-color", "white");
+    // header.classList.add("scrolled")
 
-    // header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
+    header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
 
   } else {
-    // header.css("background-color", "");
-    // header.css("box-shadow", "");
-    header.classList.remove("scrolled")
+    header.css("background-color", "");
+    header.css("box-shadow", "");
+    // header.classList.remove("scrolled")
   }
 });
 
