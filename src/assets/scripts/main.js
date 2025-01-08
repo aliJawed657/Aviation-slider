@@ -205,7 +205,7 @@ function header() {
       hamburger.classList.remove('opened');
       if (scrollY > 0) {
         $(".header").css("background-color", "white");
-        $(".header").css("transition", "all 0.7s ease-out");
+        $(".header").css("transition", "all 0.3s ease-out");
       } else {
         $(".header").css("background-color", "")
       }
@@ -237,7 +237,6 @@ function header() {
   });
 
 }
-
 
 
 
