@@ -205,7 +205,7 @@ function header() {
       hamburger.classList.remove('opened');
       if (scrollY > 0) {
         $(".header").css("background-color", "white");
-        $(".header").css("transition", "all 0.3s ease-out");
+        $(".header").css("transition", "all 0.2s ease-out");
       } else {
         $(".header").css("background-color", "")
       }
@@ -214,7 +214,6 @@ function header() {
       hamburger.classList.add('opened');
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
-
     }
   });
 
@@ -232,7 +231,6 @@ function header() {
     } else if (hamburger.classList.add('opened')) {
       $(".header .mobile-hamburger svg path").css("stroke", "green")
       $(".header .navbar-logo svg path").css("fill", "green")
-
     }
   });
 
