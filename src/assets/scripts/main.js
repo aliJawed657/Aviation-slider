@@ -12,21 +12,15 @@ isMobile = false,
 $(window).on("scroll", function () {
   let scrollPosition = $(window).scrollTop();
   let header = $(".header");
-  // let header = document.getElementById("header")
-  header.css("position", "fixed")
-  // header.classList.add("scrolled")
 
   if (scrollPosition > 0) {
     header.css("background-color", "white");
-    // header.classList.add("scrolled")
-
     header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
-
   } else {
     header.css("background-color", "");
     header.css("box-shadow", "");
-    // header.classList.remove("scrolled")
   }
+  
 });
 
 
@@ -74,7 +68,74 @@ $(document).ready(function () {
       }
     ]
   });
+
+
 });
+
+function initial() {
+  var totalSlide = $('.card-container .card').length;
+  if ($(window).width() < 600) {
+    // sliders();
+    $('.card-container').slick({
+      dots: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      draggable: true,
+      infinite: false,
+
+    });
+
+  } else {
+    totalSlide > 4 ? $('.card-container').slick({
+      dots: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      draggable: true,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+
+          }
+        },
+      ]
+    })
+      :
+      $('.card-container').unslick()
+  }
+  if (totalSlide > 4) {
+    $('.card-container .card').css('margin', "0px 10px")
+  }
+}
+$(document).ready(function () {
+  initial();
+
+  $(window).resize(function () {
+    initial();
+  });
+});
+
+
+
 
 
 
@@ -170,40 +231,63 @@ function header() {
     mobileMenuOverlay.classList.toggle('open');
     document.body.style.overflowY = mobileMenuOverlay.classList.contains('open') ? 'hidden' : 'auto';
     header.style.zIndex = mobileMenuOverlay.classList.contains('open') ? '10000' : '';
-    menu.classList.add("hamburger-open")
-    header.classList.remove("scrolled")
+    menu.classList.add("hamburger-open");
 
 
     if (hamburger.classList.contains('opened')) {
-      header.classList.remove("scrolled")
-
-      menu.classList.remove('hamburger-open')
+      header.classList.remove("scrolled");
+      menu.classList.remove('hamburger-open');
       hamburger.classList.remove('opened');
       header.style.backgroundColor = window.scrollY > 0 ? 'white' : '';
       $(".header .mobile-hamburger svg path").css("stroke", "")
       $(".header .navbar-logo svg path").css("fill", "")
-
-
     } else {
       hamburger.classList.add('opened');
-      header.classList.remove("scrolled")
-
       header.style.backgroundColor = '';
       $(".header .mobile-hamburger svg path").css("stroke", "green");
       $(".header .navbar-logo svg path").css("fill", "green");
     }
+
   });
-
   window.addEventListener("resize", () => {
-
     if (window.innerWidth > 991) {
+      header.style.backgroundColor = window.scrollY > 0 ? 'white' : '';
       mobileMenuOverlay.classList.remove('open');
       document.body.style.overflowY = 'auto';
       hamburger.classList.remove('opened');
-      header.style.backgroundColor = window.scrollY > 0 ? 'white' : '';
       $(".header .mobile-hamburger svg path").css("stroke", "")
       $(".header .navbar-logo svg path").css("fill", "");
       menu.classList.remove('hamburger-open');
     }
   });
 }
+
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  const menu = document.getElementById("menu-btn");
+  const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+  const hamburger = document.getElementById("hamburger");
+
+
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('hamburger-open');
+    mobileMenuOverlay.classList.remove('open');
+    document.body.style.overflowY = mobileMenuOverlay.classList.remove('open') ? 'hidden' : 'auto';
+    hamburger.classList.remove('opened');
+
+    $(".header .mobile-hamburger svg path").css("stroke", "")
+    $(".header .navbar-logo svg path").css("fill", "")
+
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetElement.offsetTop - 80,
+      behavior: 'smooth'
+    });
+  });
+});

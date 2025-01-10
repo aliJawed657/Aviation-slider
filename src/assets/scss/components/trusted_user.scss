@@ -28,18 +28,29 @@
         }
     }
 
-    .cards-container {
+    .card-container {
         display: flex;
-        gap: .5rem;
+        gap: .98rem;
         padding: 1.88rem 0 0 0;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
 
-        .cards {
+
+
+
+        .card {
             border-radius: 1.211rem;
             background: #E6E6E6;
-            max-width: 17.344rem;
+            max-width: 17.375rem;
             padding: 1.23rem 1.27rem 1.27rem 1.2rem;
+            gap: 1.25rem;
+            // margin-right: 1.25rem;
+            // flex: 0 0 17.327rem;
+            // &:last-child {
+            //     margin-right: 0;
+            // }
+
+
 
             .img-name-container {
                 display: flex;
@@ -125,11 +136,56 @@
             }
         }
     }
+
+
+
+}
+
+.slick-dots {
+    bottom: -30px;
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.slick-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.slick-track {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
-@media screen and (max-width:1440px){
-    .cards-container{
+
+.card-container .slick-dots li button {
+    background-color: #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    font-size: 0px;
+    border: none;
+}
+
+.card-container .slick-dots li.slick-active button {
+    background-color: #74b959;
+    opacity: 1;
+}
+
+.card-container .slick-dots li button:hover {
+    background-color: #74b959;
+}
+
+
+
+
+@media screen and (max-width:1440px) {
+    .card-container {
         gap: 1.25rem !important;
     }
 }
@@ -144,12 +200,12 @@
             }
         }
 
-        .cards-container {
+        .card-container {
             margin: 0;
             flex-wrap: wrap;
             justify-content: left;
 
-            .cards {
+            .card {
                 width: 17.375rem;
                 width: 100%;
                 max-width: 48.5%;
@@ -159,6 +215,7 @@
 }
 
 @media screen and (max-width:600px) {
+
     .trusted-user-container {
         height: fit-content;
 
@@ -170,15 +227,16 @@
             }
         }
 
-        .cards-container {
+        .card-container {
             margin: 0 !important;
             flex-wrap: wrap;
             justify-content: center;
             padding-bottom: 0;
 
-            .cards {
+            .card {
                 max-width: 100%;
                 width: 100%;
+                margin: .4rem;
             }
         }
     }

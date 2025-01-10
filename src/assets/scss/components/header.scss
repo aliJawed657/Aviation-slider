@@ -8,14 +8,18 @@
     z-index: 111;
     position: absolute;
     position: fixed;
-
     justify-content: space-between;
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
 
     &.scrolled {
         background-color: white;
         transition: all 0.2s ease-out;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: transform 1s ease-in-out;
     }
+
+
 
     .navbar-logo {
         width: 75px;
@@ -32,6 +36,7 @@
         display: flex;
         align-items: center;
 
+
         .navbar-menu {
             display: flex;
             flex-wrap: wrap;
@@ -46,6 +51,10 @@
                 cursor: pointer;
                 position: relative;
                 margin-right: 2.75rem;
+
+                a {
+                    color: #1e1e1e;
+                }
 
                 &::after {
                     content: '';
@@ -79,11 +88,12 @@
                 stroke: variables.$black;
             }
         }
-        &.show {
-            svg path {
-                stroke: none;
-            }
-        }
+
+        // &.show {
+        //     svg path {
+        //         stroke: none;
+        //     }
+        // }
     }
 }
 
@@ -171,7 +181,15 @@
                         align-items: center;
                         width: 100%;
                         margin: 1.125rem 0;
+
+                        span {
+                            color: #ffffff;
+                            // .active {
+                            //     color: variables.$secondaryColor !important;
+                            // }
+                        }
                     }
+
 
                     color: #FFF;
                     font-family: Roboto;
@@ -185,15 +203,14 @@
                         }
                     }
 
-                    &.active span svg path {
-                        fill: variables.$secondaryColor;
-                    }
+                    // &.active span svg path {
+                    //     fill: variables.$secondaryColor;
+                    // }
                 }
 
-                .active {
-                    color: variables.$secondaryColor !important;
-                }
+
             }
+
         }
     }
 
@@ -253,7 +270,7 @@
             cursor: pointer;
 
             .hamburger-open {
-                
+
                 .one {
                     opacity: 0;
                 }
