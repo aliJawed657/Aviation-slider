@@ -14,13 +14,15 @@ $(window).on("scroll", function () {
   let header = $(".header");
 
   if (scrollPosition > 0) {
+    const hamburger = document.getElementById("hamburger");
+
     header.css("background-color", "white");
     header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
   } else {
     header.css("background-color", "");
     header.css("box-shadow", "");
   }
-  
+
 });
 
 
@@ -269,6 +271,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const menu = document.getElementById("menu-btn");
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
   const hamburger = document.getElementById("hamburger");
+  const header = document.getElementById("header");
 
 
   anchor.addEventListener('click', function (e) {
@@ -278,6 +281,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.body.style.overflowY = mobileMenuOverlay.classList.remove('open') ? 'hidden' : 'auto';
     hamburger.classList.remove('opened');
 
+    $(".header").css("background-color", "white")
     $(".header .mobile-hamburger svg path").css("stroke", "")
     $(".header .navbar-logo svg path").css("fill", "")
 
