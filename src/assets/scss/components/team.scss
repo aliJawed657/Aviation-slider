@@ -63,14 +63,12 @@
     .team-bottom-image {
         display: flex;
         padding-bottom: 5.02rem;
-        justify-content: center;
         flex-wrap: wrap;
-        justify-content: center;
         margin: 0 auto;
         gap: 1.2rem;
         width: 100%;
         position: relative;
-        // max-width: 48.5rem;
+        max-width: 48.5rem;
 
         .team-member {
             position: relative;

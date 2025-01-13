@@ -4,7 +4,7 @@
     width: max-content;
 
     .button {
-        width: 9.083rem;
+        // width: 9.083rem;
         // min-height: 46px;
         padding: 0.844rem 2.094rem;
         border-radius: 3.75rem;
@@ -14,7 +14,7 @@
         font-size: 1rem;
         font-style: normal;
         font-weight: 500;
-        line-height: normal;
+        line-height: 1.172rem;
         letter-spacing: 0.32px;
         background-color: variables.$secondaryColor;
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -31,16 +31,17 @@
 
 @media screen and (max-width: 600px) {
     .button {
-        width: 7.671rem !important;
+        // width: 7.671rem !important;
         padding: 0.696rem 1.461rem !important;
         font-size: 0.91rem !important;
     }
 }
+
 @media screen and (max-width: 375px) {
     .button {
         // width: 6.671rem !important;
-        max-width: 106.73px !important;
-        padding: 0.696rem 1.461rem !important;
+        // max-width: 106.73px !important;
+        padding: 0.696rem 1.561rem !important;
         font-size: 0.81rem !important;
     }
 }

@@ -1,3 +1,4 @@
+AOS.init();
 
 var isRTL = $("html").attr("dir") == "rtl" ? true : false,
   winWidth = $(window).width(),
@@ -228,6 +229,7 @@ function header() {
   const hamburger = document.getElementById("hamburger");
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
   const menu = document.getElementById("menu-btn");
+
 
   hamburger.addEventListener("click", () => {
     mobileMenuOverlay.classList.toggle('open');

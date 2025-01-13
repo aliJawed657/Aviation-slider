@@ -55,10 +55,10 @@
     .about-section-images {
         margin-top: 3.3rem;
         display: flex;
-        gap: 1.19rem;
+        // gap: 1.19rem;
         padding-bottom: 5rem;
         flex-wrap: wrap;
-        justify-content: center ;
+        justify-content: space-between ;
 
         .image-card-left {
             width: 49%;

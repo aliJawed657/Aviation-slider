@@ -5,6 +5,7 @@
     display: flex;
     gap: 7.46rem;
     background-color: variables.$bgSecondaryGrey;
+    justify-content: space-between;
 
     .time-tracking-left-content {
         .content {

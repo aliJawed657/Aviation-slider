@@ -4,7 +4,8 @@
     width: 100%;
     background-color: variables.$bgSecondaryGrey;
     display: flex;
-    gap: 12.024rem;
+    // gap: 12.024rem;
+    justify-content: space-between;
 
     .service-section-left {
         padding: 9.063rem 0;
