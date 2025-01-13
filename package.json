@@ -16,6 +16,7 @@
     "baseURL": "https://theprojectstagingserver.com/vcm/"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "critical": "^1.3.9",
     "delete-empty": "^3.0.0",
     "gsap": "^3.12.5",

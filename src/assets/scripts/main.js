@@ -14,7 +14,7 @@ $(window).on("scroll", function () {
   let header = $(".header");
 
   if (scrollPosition > 0) {
-    const hamburger = document.getElementById("hamburger");
+    // const hamburger = document.getElementById("hamburger");
 
     header.css("background-color", "white");
     header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
