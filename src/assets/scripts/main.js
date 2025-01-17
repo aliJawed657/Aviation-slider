@@ -10,138 +10,6 @@ isMobile = false,
   });
 
 
-$(window).on("scroll", function () {
-  let scrollPosition = $(window).scrollTop();
-  let header = $(".header");
-
-  if (scrollPosition > 0) {
-    // const hamburger = document.getElementById("hamburger");
-
-    header.css("background-color", "white");
-    header.css("box-shadow", "rgba(0, 0, 0, 0.24) 0px 3px 8px");
-  } else {
-    header.css("background-color", "");
-    header.css("box-shadow", "");
-  }
-
-});
-
-
-
-
-
-
-$(document).ready(function () {
-  var totalSlides = $('.team-bottom-image .team-member').length;
-
-  $('.team-bottom-image').slick({
-    dots: totalSlides > 4 ? true : false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    draggable: true,
-
-
-    autoplay: totalSlides > 4 ? true : false,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          dots: totalSlides > 4 ? true : false
-        }
-      }
-    ]
-  });
-
-
-});
-
-function initial() {
-  var totalSlide = $('.card-container .card').length;
-  if ($(window).width() < 600) {
-    // sliders();
-    $('.card-container').slick({
-      dots: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      draggable: true,
-      infinite: false,
-
-    });
-
-  } else {
-    totalSlide > 4 ? $('.card-container').slick({
-      dots: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: false,
-      draggable: true,
-      infinite: false,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: false,
-            dots: true,
-
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: false,
-            dots: true,
-
-          }
-        },
-      ]
-    })
-      :
-      $('.card-container').unslick()
-  }
-  if (totalSlide > 4) {
-    $('.card-container .card').css('margin', "0px 10px")
-  }
-}
-$(document).ready(function () {
-  initial();
-
-  $(window).resize(function () {
-    initial();
-  });
-});
-
-
-
-
 
 
 $(window).on("resize orientationchange", function () {
@@ -225,95 +93,57 @@ function ChangeToSvg() {
 
 
 
-
-
-function header() {
-  const header = document.getElementById("header");
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-  const menu = document.getElementById("menu-btn");
-
-  hamburger.addEventListener("click", () => {
-    const isMenuOpen = mobileMenuOverlay.classList.contains('open');
-    mobileMenuOverlay.classList.toggle('open');
-    document.body.style.overflowY = isMenuOpen ? 'auto' : 'hidden';
-    header.style.zIndex = isMenuOpen ? '' : '10000';
-    menu.classList.add("hamburger-open");
-    if (isMenuOpen) {
-      header.classList.remove("scrolled");
-      menu.classList.remove('hamburger-open');
-      hamburger.classList.remove('opened');
-      header.style.backgroundColor = window.scrollY > 0 ? 'white' : '';
-      $(".header .mobile-hamburger svg path").css("stroke", "");
-      $(".header .navbar-logo svg path").css("fill", "");
-    } else {
-      hamburger.classList.add('opened');
-      header.style.backgroundColor = '';
-      $(".header .mobile-hamburger svg path").css("stroke", "green");
-      $(".header .navbar-logo svg path").css("fill", "green");
-      document.body.style.overflow = "hidden"
-
-
-    }
-  });
-
-  // window.addEventListener("resize", () => {
-  if (window.innerWidth < 991) {
-    $("body").css("overflow", "hidden", "important") // Disable scrolling
-  }
-  // });
-
-
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 991) {
-      header.style.backgroundColor = window.scrollY > 0 ? 'white' : '';
-      mobileMenuOverlay.classList.remove('open');
-      document.body.style.overflowY = 'auto'; // Re-enable scrolling
-      hamburger.classList.remove('opened');
-      $(".header .mobile-hamburger svg path").css("stroke", "");
-      $(".header .navbar-logo svg path").css("fill", "");
-      menu.classList.remove('hamburger-open');
-    }
-  });
+function clk() {
+  console.log("object")
 }
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  const menu = document.getElementById("menu-btn");
-  const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-  const hamburger = document.getElementById("hamburger");
-
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('hamburger-open');
-    mobileMenuOverlay.classList.remove('open');
-    document.body.style.overflowY = mobileMenuOverlay.classList.remove('open') ? 'hidden' : 'auto';
-    hamburger.classList.remove('opened');
-
-    $(".header").css("background-color", "white")
-    $(".header .mobile-hamburger svg path").css("stroke", "")
-    $(".header .navbar-logo svg path").css("fill", "")
-
-
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    window.scrollTo({
-      top: targetElement.offsetTop - 80,
-      behavior: 'smooth'
-    });
-  });
-});
+clk()
 
 
 
-if (window.innerWidth <= 768) {
-  document.querySelectorAll('[data-aos]').forEach((el) => {
-    el.setAttribute('data-aos-offset', '-400')
-    el.setAttribute('data-aos-duration', '1000')
-  })
-} else {
-  document.querySelectorAll('[data-aos]').forEach((el) => {
-    el.setAttribute('data-aos-offset', '50')
-  })
-}
+
+// $(document).ready(function () {
+//   var totalSlides = $('.banner-services-boxes .service-box').length;
+
+//   $('.banner-services-boxes').slick({
+//     dots: totalSlides > 4 ? true : false,
+//     speed: 300,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     draggable: true,
+
+
+//     autoplay: totalSlides > 4 ? true : false,
+//     responsive: [
+//       {
+//         breakpoint: 991,
+//         settings: {
+//           slidesToShow: 3,
+//           slidesToScroll: 1,
+//           infinite: false,
+//           dots: true,
+
+//         }
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//           infinite: false,
+//           dots: true,
+
+//         }
+//       },
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           dots: totalSlides > 4 ? true : false
+//         }
+//       }
+//     ]
+//   });
+
+
+// });
+

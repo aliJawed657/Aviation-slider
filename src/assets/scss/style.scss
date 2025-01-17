@@ -7,20 +7,11 @@
 @use 'global/reset';
 @use 'global/fonts';
 @use 'global/variables';
-@use 'global/button.scss';
-@use 'components/hero.scss';
-@use 'components/trusted_user.scss';
-@use 'components/get_started.scss';
-@use 'components/about.scss';
-@use 'components/service.scss';
-@use 'components/features.scss';
-@use 'components/time_tracking.scss';
-@use 'components/customer_support.scss';
-@use 'components/team.scss';
+
 // @use 'global/mixins';
 @use 'global/global';
 
 // import scss files (for Components)
 
 @use 'components/header';
-@use 'components/footer';
+@use 'components/banner';
