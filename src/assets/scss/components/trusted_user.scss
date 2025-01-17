@@ -2,9 +2,9 @@
 
 .trusted-user-container {
     width: 100%;
+    padding: 4.53rem 0;
 
     .heading {
-        padding-top: 4.53rem;
 
         p {
             color: variables.$textColor;
@@ -31,7 +31,7 @@
     .card-container {
         display: flex;
         gap: .98rem;
-        padding: 1.88rem 0 0 0;
+        margin: 1.88rem 0 0 0;
         justify-content: space-between;
         flex-wrap: wrap;
 
@@ -193,6 +193,7 @@
 @media screen and (max-width:992px) {
     .trusted-user-container {
         height: fit-content;
+        // padding: 0;
 
         .heading {
             p {
@@ -217,14 +218,15 @@
 @media screen and (max-width:600px) {
 
     .trusted-user-container {
+        padding: 0;
         height: fit-content;
 
         .heading {
             padding-top: 0;
 
-            p {
-                margin: 0 1.25rem;
-            }
+            // p {
+            //     margin: 0 1.25rem;
+            // }
         }
 
         .card-container {

@@ -3,11 +3,13 @@
 .customer-support-section {
         width: 100%;
         display: flex;
-        gap: 2.11rem;
+        // gap: 2.11rem;
         justify-content: space-between;
+        align-items: center;
+        padding: 6.563rem 0 5rem;
 
         .customer-support-left-image {
-                padding: 6.58rem 0 5rem 0;
+                // padding: 6.58rem 0 5rem 0;
 
                 .bg-blur-image {
                         position: relative;
@@ -33,7 +35,7 @@
         }
 
         .customer-support-right-content {
-                padding: 11.64rem 0 15.12rem 0;
+                // padding: 11.64rem 0 15.12rem 0;
 
                 .content {
                         .main-heading {
@@ -82,12 +84,12 @@
                 display: grid;
 
                 .customer-support-left-image {
-                        padding: 3.28rem 0 2.5rem 0;
+                        margin: 3.28rem 0 2.5rem 0;
                         order: 2;
                 }
 
                 .customer-support-right-content {
-                        padding: 5.64rem 0 0 0;
+                        // padding: 5.64rem 0 0 0;
                         order: 1;
 
                         .content {
@@ -112,8 +114,9 @@
 
 @media screen and (max-width:600px) {
         .customer-support-section {
+                padding: 0;
                 .customer-support-left-image {
-                        padding: 3.28rem 0 0 0;
+                        // padding: 3.28rem 0 0;
                         order: 2;
 
                         .bg-blur-image {

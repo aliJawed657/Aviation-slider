@@ -4,17 +4,20 @@
 .footer-section {
     width: 100%;
     background-color: variables.$textColor;
+    // padding: 2.063rem 0 1.688rem;
+    padding-top: 2.063rem;
+    padding-bottom: 1.688rem;
 
     .footer-section-top {
-        padding-top: 2.06rem;
-        padding-bottom: 2.25rem;
+        // padding-top: 2.06rem;
+        margin-bottom: 2.25rem;
         text-align: center;
 
         .logo {
-            margin: 0 auto;
+            margin: 0 auto 0.56rem;
             width: 6.563rem;
             height: 5.313rem;
-            margin-bottom: 0.56rem;
+            // margin-bottom: 0.56rem;
 
             svg {
                 width: 100%;
@@ -59,11 +62,14 @@
     }
 
     .footer-section-bottom {
-        padding: 1.688rem 0;
+        margin-top: 1.688rem;
 
         .content {
             display: -webkit-inline-box;
-            gap: 37.688rem;
+            // gap: 37.688rem;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
 
             .left-side {
                 color: #B2B3CF;
@@ -86,7 +92,13 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 150%;
-                    padding-right: 0.875rem;
+                    padding: 0 0.875rem;
+                    border-right: 1px solid #626381;
+
+                    &:last-child {
+                        border: none;
+                        padding-right: 0;
+                    }
                 }
             }
         }
@@ -95,9 +107,9 @@
 
 @media screen and (max-width: 992PX) {
     .footer-section {
-        &.container-padding {
-            padding-bottom: 0;
-        }
+        // &.container-padding {
+        //     padding-bottom: 0;
+        // }
 
         .border {
             border-top: 1px solid #CACDC9;
@@ -105,9 +117,9 @@
             margin-left: -1.25rem;
         }
 
-        .footer-section-top {
-            // padding-top: 0;
-        }
+        // .footer-section-top {
+        //     // padding-top: 0;
+        // }
 
         .footer-section-bottom {
             .content {
@@ -116,7 +128,6 @@
 
                 .left-side {
                     margin-bottom: 1.25rem;
-
                 }
 
                 .right-side {

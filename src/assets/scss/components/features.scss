@@ -2,10 +2,11 @@
 
 .features-section {
     width: 100%;
+    padding: 3.75rem 8.375rem 5rem;
 
     .features-top-section {
-        padding-top: 3.75rem;
-        padding-bottom: 0.32rem;
+        // padding-top: 3.75rem;
+        margin-bottom: 0.32rem;
 
         .content {
             .main-heading {
@@ -26,6 +27,7 @@
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
                     /* 4.05rem */
                     span {
                         color: variables.$secondaryColor;
@@ -59,15 +61,16 @@
     .features-bottom-section {
         display: flex;
         gap: 3.21rem;
-        padding-bottom: 5rem;
+        // padding-bottom: 5rem;
         justify-content: space-between;
+        align-items: center;
 
         .features-bottom-left-image {
             position: relative;
 
             .bg-image-circle {
                 width: 40.438rem;
-                height: 23.25rem;
+                // height: 23.25rem;
 
                 img {
                     width: 100%;
@@ -93,9 +96,9 @@
 
         .features-bottom-right-content {
             width: 100%;
- 
+
             .content {
-                padding-top: 4.063rem;
+                // padding-top: 4.063rem;
 
                 // padding-bottom: 5rem;
                 .main-heading {
@@ -131,6 +134,8 @@
 
 @media screen and (max-width:992px) {
     .features-section {
+        padding: 2rem 1.25rem;
+
 
         .features-bottom-section {
             display: flex;
@@ -168,23 +173,12 @@
         .features-top-section {
             padding-top: 0;
         }
-        .features-bottom-section{
+
+        .features-bottom-section {
             padding-bottom: 0;
-        .features-bottom-left-image {
-            .bg-image-circle {
-                width: 20.438rem !important;
-                height: 11.25rem !important;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-
-                }
-
-                .bg-image {
-                    position: absolute;
-                    top: 0;
-                    z-index: 1;
+            .features-bottom-left-image {
+                .bg-image-circle {
                     width: 20.438rem !important;
                     height: 11.25rem !important;
 
@@ -193,26 +187,40 @@
                         height: 100%;
 
                     }
-                }
-            }
-        }
 
-        .features-bottom-right-content {
-            .content {
-                padding-bottom: 0 !important;
-                .main-heading {
-                    p {
-                        text-align: center;
+                    .bg-image {
+                        position: absolute;
+                        top: 0;
+                        z-index: 1;
+                        width: 20.438rem !important;
+                        height: 11.25rem !important;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+
+                        }
                     }
                 }
+            }
 
-                .description {
-                    p {
-                        text-align: center;
+            .features-bottom-right-content {
+                .content {
+                    padding-bottom: 0 !important;
+
+                    .main-heading {
+                        p {
+                            text-align: center;
+                        }
+                    }
+
+                    .description {
+                        p {
+                            text-align: center;
+                        }
                     }
                 }
             }
         }
     }
-}
 }

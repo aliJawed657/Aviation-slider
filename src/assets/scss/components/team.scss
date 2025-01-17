@@ -3,9 +3,10 @@
 .team-section {
     width: 100%;
     background-color: variables.$bgSecondaryGrey;
+    padding-top: 3.81rem !important;
+    padding-bottom: 4.813rem !important;
 
     .team-top-content {
-        padding-top: 3.81rem;
         padding-bottom: 4rem;
 
         .content {
@@ -62,7 +63,7 @@
 
     .team-bottom-image {
         display: flex;
-        padding-bottom: 5.02rem;
+        // padding-bottom: 5.02rem;
         flex-wrap: wrap;
         margin: 0 auto;
         gap: 1.2rem;
@@ -78,9 +79,9 @@
             align-items: center;
             margin-right: 0.875rem;
             padding: .6rem;
-            max-width: 23.1%;
-            flex: 0 0 23.1%;
-            width: 11.188rem !important;
+            // max-width: 23.1%;
+            // flex: 0 0 23.1%;
+            // width: 11.188rem !important;
 
 
             &:last-child {
@@ -243,9 +244,11 @@
 
 @media screen and (max-width:600px) {
     .team-section {
-        .team-top-content {
-            padding-top: 0;
-        }
+        padding: 2rem 1.25rem !important;
+
+        // .team-top-content {
+        //     padding-top: 0;
+        // }
 
         .team-bottom-image {
             padding-bottom: 0;

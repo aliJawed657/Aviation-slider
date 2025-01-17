@@ -6,11 +6,14 @@
     gap: 7.46rem;
     background-color: variables.$bgSecondaryGrey;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 2.248rem !important;
+
 
     .time-tracking-left-content {
         .content {
-            max-width: 34.16406rem;
-            padding: 11.13rem 0;
+            // max-width: 34.16406rem;
+            // padding: 11.13rem 0;
 
             .main-heading {
                 margin-bottom: 2.13rem;
@@ -71,7 +74,7 @@
 
     .time-tracking-right-image {
         .bg-image {
-            padding-top: 2.25rem;
+            // padding-top: 2.25rem;
             position: relative;
             width: 31.47694rem;
 
@@ -81,7 +84,7 @@
             }
 
             .character-bg-image {
-                padding-top: 2.4rem;
+                // padding-top: 2.4rem;
                 width: 30rem;
                 position: absolute;
                 top: 0;
@@ -107,7 +110,7 @@
 
         .time-tracking-left-content {
             .content {
-                padding: 3.75rem 0;
+                // padding: 3.75rem 0;
                 text-align: center;
                 margin: 0 auto;
 
@@ -126,9 +129,9 @@
             .bg-image {
                 margin: 0% auto;
 
-                .character-bg-image {
-                    padding-top: 2rem;
-                }
+                // .character-bg-image {
+                //     padding-top: 2rem;
+                // }
             }
         }
     }
@@ -139,6 +142,7 @@
         flex-wrap: wrap;
         gap: 0;
         justify-content: center;
+        
 
         .time-tracking-left-content {
             .content {
