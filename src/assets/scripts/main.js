@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 
 var isRTL = $("html").attr("dir") == "rtl" ? true : false,
   winWidth = $(window).width(),
@@ -26,6 +26,10 @@ $(document).keyup(function (e) {
   }
 });
 
+
+
+
+
 function browserDetect() {
   navigator.sayswho = (function () {
     var ua = navigator.userAgent,
@@ -52,7 +56,7 @@ function browserDetect() {
 $(document).ready(function () {
   // animateWords();
   ChangeToSvg();
-  header()
+  // header()
 });
 
 
@@ -93,57 +97,60 @@ function ChangeToSvg() {
 
 
 
-function clk() {
-  console.log("object")
-}
-clk()
+// aviation progress bar //
+
+$(document).ready(function () {
+  var $slider = $('.aviation-slides');
+  var $progressBar = $('.progress');
+  var $progressBarLabel = $('.slider__label');
+
+  var totalSlides = $slider.find('.slide-wrap').length;
+
+  var progressStep = 100 / totalSlides;
+
+  $progressBar.css('background-size', `${progressStep}% 100%`).attr('aria-valuenow', 0);
+  $progressBarLabel.text('0% completed');
+
+  $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var progress = (nextSlide + 1) * progressStep;
+
+    $progressBar
+      .css('background-size', progress + '% 100%')
+      .attr('aria-valuenow', progress);
+
+    $progressBarLabel.text(progress + '% completed');
+  });
+
+  $slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    initialSlide: 0,
+    prevArrow: $('.slick-previous-arrow'),
+    nextArrow: $('.slick-next-arrow'),
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          centerMode: false
+        }
+      },
+
+    ]
+  });
+
+  $('.slick-next-arrow').addClass('active');
+  $('.slick-previous-arrow, .slick-next-arrow').on('click', function () {
+    $('.slick-previous-arrow, .slick-next-arrow').removeClass('active');
+
+    $(this).addClass('active');
+  });
+});
 
 
 
 
-// $(document).ready(function () {
-//   var totalSlides = $('.banner-services-boxes .service-box').length;
-
-//   $('.banner-services-boxes').slick({
-//     dots: totalSlides > 4 ? true : false,
-//     speed: 300,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     draggable: true,
-
-
-//     autoplay: totalSlides > 4 ? true : false,
-//     responsive: [
-//       {
-//         breakpoint: 991,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 1,
-//           infinite: false,
-//           dots: true,
-
-//         }
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 1,
-//           infinite: false,
-//           dots: true,
-
-//         }
-//       },
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           dots: totalSlides > 4 ? true : false
-//         }
-//       }
-//     ]
-//   });
-
-
-// });
+//end //
 

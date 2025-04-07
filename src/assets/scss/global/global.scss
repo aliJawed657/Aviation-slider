@@ -17,6 +17,8 @@ body {
     font-size: 0.8333333333vw;
     font-family: variables.$primaryFont;
     font-family: variables.$secondaryFont;
+    overflow-x: hidden;
+
 
     @media screen and (max-width: 991px) {
         font-size: 2.083333333vw;
@@ -30,26 +32,93 @@ body {
 }
 
 
-.container {
+
+.btn-btn-secondary {
+    width: max-content;
+
+    .button {
+        // width: 9.083rem;
+        // min-height: 46px;
+
+        padding: 0.75rem 1.5rem;
+        border-radius: 3.75rem;
+        border: none;
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.4rem;
+        background-color: variables.$white;
+        font-family: 'HelveticaNeue';
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background: #ebdfc7;
+            color: #2c2e34;
+            transition: all .4s ease-out;
+        }
+
+        a {
+            color: variables.$black;
+        }
+
+
+    }
+
+
+}
+
+
+.sec-padding{
+    padding: 12.5rem 0  !important;
+    @media screen and (max-width: 600px) {
+        padding: 5rem 0 !important;
+    }
+}
+
+.sec-pad {
+    padding: 12.5rem 7.5rem !important;
+
+    @media screen and (max-width: 600px) {
+        padding: 5rem 1.25rem !important;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .button {
+        padding: 0.5rem 1.125rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .button {
+        // width: 6.671rem !important;
+        // max-width: 106.73px !important;
+        padding: 0.696rem 1.561rem !important;
+        font-size: 0.81rem !important;
+    }
+}
+
+
+
+
+.container-padding {
     height: 100%;
     margin: 0 auto;
     max-width: 100%;
     padding: 0 7.5rem;
     width: 100%;
-}
-
-
-.container-padding {
-    padding: 0 8.375rem;
 
     @media screen and (max-width: 991px) {
-        padding: 0 1.25rem;
+        padding: 0 1.25rem !important;
 
     }
 
     @media screen and (max-width: 600px) {
         padding: 2rem 1.25rem;
-
     }
 }
 
@@ -64,11 +133,193 @@ a {
 
 img {
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    display: block;
+}
+
+.heading1 {
+    font-family: "HelveticaNeue";
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 4.875rem;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.75rem;
+        line-height: 2.275rem;
+    }
+
+}
+
+
+
+.heading2 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.75rem;
+        line-height: 2.275rem;
+    }
+
+}
+
+
+
+.heading3 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.75rem;
+        line-height: 2.275rem;
+    }
+
+}
+
+
+
+.heading4 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.5rem;
+        line-height: 1.95rem;
+    }
+}
+
+.heading5 {
+    font-family: "HelveticaNeue";
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 4.875rem;
+
+    @media screen and (max-width: 600px) {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+}
+
+.heading6 {
+    font-family: "HelveticaNeue";
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.body1 {
+    font-size: 1.125rem;
+    line-height: 1.575rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+}
+
+.body2 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 0.875rem;
+        line-height: 1.225rem;
+    }
+}
+
+
+
+.body3 {
+    font-size: 1.125rem;
+    line-height: 1.575rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+}
+
+.body4 {
+    font-size: 1.75rem;
+    line-height: 2.275rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+}
+
+.body5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.125rem;
+        line-height: 1.575rem;
+    }
+
+}
+
+
+.body6 {
+    font-size: 1.125rem;
+    line-height: 1.575rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 0.875rem;
+        line-height: 1.225rem;
+    }
+}
+
+.body7 {
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+}
+
+.body8 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+}
+
+.body9 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 700;
+
+    @media screen and (max-width: 600px) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}
+
+.body10 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
 }
 
 .sec-padded {
-    padding: 6.25rem 0;
+    padding: 12.5rem 0;
 
     @media screen and (max-width: 600px) {
         padding: 3rem 0;

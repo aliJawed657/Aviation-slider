@@ -6,41 +6,43 @@
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/abstracts/_mixins.scss
 
 @mixin font($content) {
-    @include language(ar) {
-      font-family: $primaryFont;
+  @include language(ar) {
+    font-family: $primaryFont;
 
-      @if $content == 'regular' {
-        font-weight: 400;
-      }
-      @else if $content == 'bold' {
-          font-weight: 700;
-      }
+    @if $content =='regular' {
+      font-weight: 400;
     }
 
-    @include language(en) {
-      @if $content == 'regular' {
-          font-family: "PP-Neue-Montreal", Arial, Helvetica, sans-serif;
-          font-weight: 400;
-      }
-      @else if $content == 'bold' {
-          font-family: "PP-Neue-Montreal", Arial, Helvetica, sans-serif;
-          font-weight: 400;
-      }
+    @else if $content =='bold' {
+      font-weight: 700;
     }
-    
-    
+  }
+
+  @include language(en) {
+    @if $content =='regular' {
+      font-family: "PP-Neue-Montreal", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+    }
+
+    @else if $content =='bold' {
+      font-family: "PP-Neue-Montreal", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+    }
+  }
 }
 
 @mixin language($language) {
-	@if ($language == 'ar') {
-		&:lang(ar) {
-			@content;
-		}
-	} @else {
-		&:lang(en) {
-			@content;
-		}
-	}
+  @if ($language =='ar') {
+    &:lang(ar) {
+      @content;
+    }
+  }
+
+  @else {
+    &:lang(en) {
+      @content;
+    }
+  }
 }
 
 @mixin ellipsis($line: 1) {

@@ -1,14 +1,15 @@
 @font-face {
     font-family: 'helvetica';
-    src: url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype');
+    src: url('../fonts/Helvetica.woff') format('woff'),
+        url('../fonts/Helvetica.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HelveticaNeue';
-    src: url('../fonts/helveticaneue-webfont.woff2') format('woff2'),
-         url('../fonts/helveticaneue-webfont.woff') format('woff');
+    src: url('../fonts/HelveticaNeueLight.otf') format('woff2'),
+        url('../fonts/HelveticaNeueLight.otf') format('woff');
     font-weight: 300;
     font-style: normal;
 
@@ -22,6 +23,7 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'HelveticaNeueLT-Arabic';
     src: url('../fonts/HelveticaNeueLTArabic-Light.woff2') format('woff2'),
@@ -30,5 +32,3 @@
     font-weight: 300;
     font-style: normal;
 }
-
-
