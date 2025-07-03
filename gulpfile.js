@@ -23,7 +23,7 @@ const { src, dest, watch, series, task } = require('gulp'),
 
 var paths = {
 	source: 'src',
-	destination: 'build',
+	destination: 'dist',
 };
 
 // create dist
